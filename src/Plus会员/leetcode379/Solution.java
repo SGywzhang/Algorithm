@@ -35,4 +35,15 @@ public class Solution {
             }
         }
     }
+
+    public static void main(String[] args) {
+        PhoneDirectory directory = new Solution().new PhoneDirectory(3);
+        System.out.println(directory.get());    // 0
+        System.out.println(directory.get());    // 1
+        System.out.println(directory.check(2)); // true
+        System.out.println(directory.get());    // 2
+        System.out.println(directory.check(2)); // false
+        directory.release(2);
+        System.out.println(directory.check(2)); // true
+    }
 }
